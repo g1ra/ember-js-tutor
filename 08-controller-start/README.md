@@ -1,9 +1,7 @@
 ember-js-tutor
 ==============
-
 08 Controller.
 
-Ember tutorial project.
 Lets learn some ember js!
 -------------------------
 
@@ -13,7 +11,10 @@ What is application?
 * Views and templates manage visualization. 
 * Store and models handle data. 
 
+### Download Foundation
 Note: Front-end is using Zerb http://foundation.zurb.com/ front-end framework .
+
+### Fix foundation with ember
 We have to erase 
 ```javascript
    <script>
@@ -30,5 +31,9 @@ App = Ember.Application.create({
         });
     }       
 });
-at app.js
 ```
+at app.js
+
+---
+
+
