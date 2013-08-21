@@ -1,4 +1,5 @@
 ember-js-tutor
 ==============
 
-ember.js starter tutorial test project
+Ember tutorial project.
+Lets learn some ember js!
