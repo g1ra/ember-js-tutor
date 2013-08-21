@@ -12,7 +12,8 @@ What is application?
 * Store and models handle data. 
 
 ### Download Foundation
-Note: Front-end is using Zerb http://foundation.zurb.com/ front-end framework .
+Boost our fronted a littlebit.
+Front-end is using Zerb http://foundation.zurb.com/ front-end framework .
 
 ### Fix foundation with ember
 We have to erase 
@@ -35,5 +36,13 @@ App = Ember.Application.create({
 at app.js
 
 ---
+
+### Overview
+
+Lets make a list of our team member. 
+Its an array of data.
+We will use ember ArrayController. Similar as backbone collection class.
+
+### Create folders.
 
 
