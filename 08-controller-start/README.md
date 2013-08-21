@@ -1,7 +1,7 @@
 ember-js-tutor
 ==============
 
-8. Controller.
+08 Controller.
 
 Ember tutorial project.
 Lets learn some ember js!
