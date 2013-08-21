@@ -1,10 +1,12 @@
 ember-js-tutor
 ==============
 
-Controller.
-Start with these files/folders.
+8. Controller.
 
-8. Controller. 
+Ember tutorial project.
+Lets learn some ember js!
+-------------------------
+
 What is application? 
 * Behaviour is stored in controllers. 
 * Router is manage state. 
@@ -30,5 +32,3 @@ App = Ember.Application.create({
 });
 at app.js
 ```
-Ember tutorial project.
-Lets learn some ember js!
