@@ -1,7 +1,31 @@
 ember-js-tutor
 ==============
 
-Controller
+Controller.
+Start with these files/folders.
+
+8. Controller. 
+What is application? 
+* Behaviour is stored in controllers. 
+* Router is manage state. 
+* Views and templates manage visualization. 
+* Store and models handle data. 
+
+Note: Front-end is using Zerb http://foundation.zurb.com/ front-end framework .
+We have to erase 
+>  <script>
+>    $(document).foundation();
+>  </script>
+from the Foundation sample html.
+And add
+> App = Ember.Application.create({
+>     ready: function() {
+>         Ember.run.next(this, function(){ 
+>             $(document).foundation(); 
+>         });
+>     }       
+> });
+at app.js
 
 Ember tutorial project.
 Lets learn some ember js!
