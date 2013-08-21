@@ -39,11 +39,9 @@ at app.js
 
 ### Overview
 
-Lets make a list of our team member. 
-
-Its an array of data.
-
-We will use ember ArrayController. Similar as backbone collection class.
+>Lets make a list of our team member. 
+>Its an array of data.
+>We will use ember ArrayController. Similar as backbone collection class.
 
 ### Create folders.
 
