@@ -82,8 +82,31 @@ didInsertElement : http://emberjs.com/api/classes/Ember.View.html#event_didInser
 ### Controller
 Manage multiple alerts in application.
 
-Create new file : js/app/controllers/alert\_controller.js 
+Create new file : js/app/controllers/alert\_controller.js  
+With content:
 ```javascript
 App.AlertController = Ember.ArrayController.extend();
 App.alertController = App.AlertController.create({ content: Ember.A() });
 ```
+Ember.A is an Ember Array implementation http://emberjs.com/api/classes/Ember.html#method_A
+Ember.ArrayController -> http://emberjs.com/api/classes/Ember.ArrayController.html
+
+### View: alert collection
+Create new view file : js/app/views/alert_list.js
+```javascript
+App.AlertListView = Ember.CollectionView.extend({
+    itemViewClass: "App.AlertView" // View Class for each item in CollectionView
+    ,contentBinding: "App.alertController" // Bind same content as in alertController object ! 
+});
+```
+CollectionView is maintain DOM representation and view objects of  
+an array items. http://emberjs.com/api/classes/Ember.CollectionView.html
+
+### Include script tags
+```javascript
+  <script src="js/app/views/alert_list.js"></script>
+  <script src="js/app/controllers/alert_controller.js"></script>
+```
+
+
+
