@@ -19,14 +19,14 @@ App.AlertView = Ember.View.extend({
 Note: We can create a template inside View, but we don't go that way.
 
 ### New template
-Create a new handlebar template in main html, with same name as in "templateName" in view. (_alert)
+Create a new handlebar template in main html, with same name as in "templateName" in view. (\_alert)
 ```
   <script type="text/x-handlebars" data-template-name="_alert">
      {{view.message}}
   </script>
 ```
 
-### Include our view.
+### Include our view js
 ```
 <script src="js/app/views/alert.js"></script>
 ```
