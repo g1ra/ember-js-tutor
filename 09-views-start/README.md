@@ -51,7 +51,7 @@ App.AlertView = Ember.View.extend({
 This will set a class attribute on a view's html tag. 
 alert-box is a Zerb Foundation CSS Class.
 
-#### Binding Classnames
+#### Binding Classname
 Bind a className so we can update CSS className programatically.
 ```python
 App.AlertView = Ember.View.extend({
@@ -64,13 +64,13 @@ App.AlertView = Ember.View.extend({
 We can change other things...  for example: tagName
 
 #### View events
-Create a new click event. 
+Create a new click event.  
 $() is refer to JQuery. 
 ```javascript
     ,click: function () {
         var ths = this; // save reference to AlertView into ths
         this.$().fadeOut(500, function () {
-            ths.remove(); // this is a view DOM object! ths is an AlerView instance! 
+            ths.remove(); // "this" is a view DOM object! "ths" is an AlerView instance! 
         });
     }
     ,didInsertElement: function () {
@@ -78,3 +78,12 @@ $() is refer to JQuery.
     }
 ```
 didInsertElement : http://emberjs.com/api/classes/Ember.View.html#event_didInsertElement
+
+### Controller
+Manage multiple alerts in application.
+
+Create new file : js/app/controllers/alert\_controller.js 
+```javascript
+App.AlertController = Ember.ArrayController.extend();
+App.alertController = App.AlertController.create({ content: Ember.A() });
+```
