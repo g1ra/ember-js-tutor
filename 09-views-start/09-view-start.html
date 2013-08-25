@@ -31,6 +31,7 @@
 </section>
 </nav>
 <div class="container">
+    {{ view App.AlertListView }}
     <div class="row">
         {{ outlet }}
     </div>
@@ -38,7 +39,7 @@
 </script>
 
   <script type="text/x-handlebars" data-template-name="_alert">
-     {{view.message}}
+     {{message}}
   </script>
 
   <script type="text/x-handlebars" data-template-name="index">

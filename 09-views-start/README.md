@@ -66,6 +66,7 @@ We can change other things...  for example: tagName
 #### View events
 Create a new click event.  
 $() is refer to JQuery. 
+AlertView Class :
 ```javascript
     ,click: function () {
         var ths = this; // save reference to AlertView into ths
@@ -88,7 +89,8 @@ With content:
 App.AlertController = Ember.ArrayController.extend();
 App.alertController = App.AlertController.create({ content: Ember.A() });
 ```
-Ember.A is an Ember Array implementation http://emberjs.com/api/classes/Ember.html#method_A
+We create alertController for CollectionView contentBinding for next section.
+Ember.A is an Ember Array implementation http://emberjs.com/api/classes/Ember.html#method_A  
 Ember.ArrayController -> http://emberjs.com/api/classes/Ember.ArrayController.html
 
 ### View: alert collection
@@ -102,11 +104,39 @@ App.AlertListView = Ember.CollectionView.extend({
 CollectionView is maintain DOM representation and view objects of  
 an array items. http://emberjs.com/api/classes/Ember.CollectionView.html
 
-### Include script tags
+### Fix html
+Include script tags.
 ```javascript
   <script src="js/app/views/alert_list.js"></script>
   <script src="js/app/controllers/alert_controller.js"></script>
 ```
+Put somewhere the place of AlertView. For example in application template.
+```html
+<div class="container">
+    {{ view App.AlertListView }}
+    <div class="row">
+```
+
+\_alert view is worked so far, because AlertView is contained message. But now its content.
+```javascript
+  <script type="text/x-handlebars" data-template-name="_alert">
+     {{view.content.message}}
+  </script>
+```
+### Test out in browser console
+
+> App.alertController.pushObject(Ember.Object.create({message: 'olleH!Ja!'}));
+> Click to remove, then add another one.
+> App.alertController.pushObject(Ember.Object.create({message: 'dlroW olleH!'}));
+> Notice. The first is not removed.
+> We have to use removeFromParent in AlertView Class instead of remove.
+```python
+            ths.removeFromParent(); // this is a view DOM object! ths is an AlerView instance! 
+```
+> App.alertController.pushObject(Ember.Object.create({message: 'Access denied', kind: 'alert'}));
+
+
+
 
 
 
