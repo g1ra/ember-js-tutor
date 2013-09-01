@@ -130,7 +130,7 @@ Put somewhere the place of AlertView. For example in application template.
 > App.alertController.pushObject(Ember.Object.create({message: 'dlroW olleH!'}));
 > Notice. The first is not removed.
 > We have to use removeFromParent in AlertView Class instead of remove.
-http://emberjs.com/api/classes/Ember.View.html#method\_removeFromParent
+http://emberjs.com/api/classes/Ember.View.html#method_removeFromParent
 ```python
             ths.removeFromParent(); // this is a view DOM object! ths is an AlerView instance! 
 ```
